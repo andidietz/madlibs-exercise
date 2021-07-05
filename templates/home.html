@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block title %}Madlibs Questions{% endblock %}
+{% block content %}
+    <form action="/story">
+        {% for question in questions %}
+            <label>{{question}} : <input type="text" name={{question}}></label>
+            <br>   
+        {% endfor %}
+        <button>Create</button>
+    </form>
+{% endblock %}
